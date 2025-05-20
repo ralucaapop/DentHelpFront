@@ -1,0 +1,140 @@
+.menu {
+    background-color: #E0F7FA;
+    border-right: 1px solid #B2EBF2;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    min-height: 100%;
+}
+
+.logo {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.logo-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.hamburgerImg{
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+.menuItems {
+    list-style: none; /* Elimină bullet points */
+    margin: 0 0;
+    flex-grow: 1;
+    padding-top: 1rem;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.menuItems li {
+    margin: 15px 0; /* Spațiu între elemente */
+}
+
+.menuItems a {
+    text-decoration: none; /* Elimină sublinierea */
+    color: #00796B; /* Culoare text */
+    font-weight: bold; /* Face textul mai îndrăzneț */
+    transition: color 0.3s ease; /* Animație pentru hover */
+}
+
+.category {
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+}
+
+.menuItems a:hover {
+    color: #004D40;
+}
+
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0 30px;
+    display: block;
+}
+
+.submenu li {
+    margin: 10px 0; /* Spațiu între subelemente */
+}
+
+.verticalIcon{
+    width: 35px;
+    height: 40px;
+}
+
+.menuItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.footerMenu {
+    padding-bottom: 50px;
+    padding-left: 40px;
+}
+
+.footerMenu ul {
+    list-style: none; /* Elimină bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.footerMenu li {
+    margin: 10px 0; /* Spațiu între elemente */
+}
+
+.footerMenuButtons {
+    text-decoration: none; /* Elimină sublinierea */
+    color: #00796B; /* Culoare text */
+    background-color: transparent;
+    padding: 0;
+}
+
+.footerMenuButtons:hover {
+    color: #004D40; /* Schimbă culoarea la hover */
+    background-color: transparent;
+    padding: 0;
+
+}
+
+
+.submenu {
+    list-style-type: none; /* Elimină stilul de listă */
+}
+
+.submenu a {
+    display: block; /* Face link-urile să fie blocuri */
+    padding: 10px; /* Padding pentru link-urile din submenu */
+    color: #16336e; /* Culoarea link-urilor */
+    text-decoration: none; /* Elimină sublinierea */
+}
+
+.submenu a:hover {
+    font-size: 15px; /* Subliniere la hover */
+}
+
+
+.verticalItems{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
