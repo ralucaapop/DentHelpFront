@@ -1,4 +1,4 @@
-import styles from '../assets/css/Navbar.module.css';
+import styles from '../assets/css/NavBar.module.css';
 import {isTokenValid, parseJwt} from "../service/authService.jsx";
 import {useNavigate} from "react-router-dom";
 
