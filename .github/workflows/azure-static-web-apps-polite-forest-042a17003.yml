@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Clean install with legacy-peer-deps
+      - name: Install dependencies with legacy-peer-deps
         run: npm install --legacy-peer-deps
 
       - name: Build app
@@ -36,6 +36,7 @@ jobs:
           action: "upload"
           app_location: "/"
           output_location: "build"
+          skip_app_build: true
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
