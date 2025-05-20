@@ -5,6 +5,8 @@ import axios from "axios";
 
 const Chatbot = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const API_KEY = import.meta.env.CHATBOOT;
+
     const [messages, setMessages] = useState([
         {
             message:"Bună ziua! Cu ce vă pot ajuta?",

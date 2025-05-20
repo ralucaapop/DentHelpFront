@@ -3,6 +3,9 @@ import axios from 'axios';
 import {addResponseMessage, Widget} from "react-chat-widget";
 
 const Consultant = () => {
+    const API_KEY = import.meta.env.CONSULTANT_API;
+    const CONSULTANT_ASSISTANT = import.meta.env.CONSULTANT_ASSISTANT;
+
     const [isOpen, setIsOpen] = useState(false);
 
     const [messages, setMessages] = useState([
@@ -77,7 +80,7 @@ const Consultant = () => {
                     "OpenAI-Beta": "assistants=v2"
                 },
                 body: JSON.stringify({
-                    "assistant_id": "asst_TkEL4S45DnfnVkLqHAVbZw8f"
+                    "assistant_id": CONSULTANT_ASSISTANT
                 })
             });
 
