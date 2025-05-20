@@ -75,7 +75,7 @@ import t38P from "../assets/tooth/38P.png";
 import t38G from "../assets/tooth/38G.png";
 import t41 from "../assets/tooth/41.png";
 import t41P from "../assets/tooth/41P.png";
-import t41G from "../assets/tooth/41G.png";
+import t41G from "../assets/tooth/41g.png";
 import t42 from "../assets/tooth/42.png";
 import t42P from "../assets/tooth/42P.png";
 import t42G from "../assets/tooth/42G.png";
