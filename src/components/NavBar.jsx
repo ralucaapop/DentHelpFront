@@ -25,7 +25,7 @@ const Navbar = () => {
                     </>
                 ) : (
                     <>
-                        <a href="/login" className={styles["history"]}>Autentificare</a>
+                        <a href="/Login" className={styles["history"]}>Autentificare</a>
                     </>
                 )}
                 <button onClick={() => goToHomeSection('history')} className={styles["history"]}>Despre noi</button>
