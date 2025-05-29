@@ -28,9 +28,9 @@ const Navbar = () => {
                         <button onClick={() => goToHomeSection("options-section")} className={styles["menu-btn"]}>Meniu</button>
                     </>
                 ) : (
-                    <>
-                        <p onClick={handleRedirectLogin} className={styles["history"]}>Autentificare</p>
-                    </>
+
+                        <button onClick={handleRedirectLogin} className={styles["history"]}>Autentificare</button>
+
                 )}
                 <button onClick={() => goToHomeSection('history')} className={styles["history"]}>Despre noi</button>
                 <button onClick={() => goToHomeSection('contact')} className={styles["contact"]}>Contact</button>
