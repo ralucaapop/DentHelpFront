@@ -15,6 +15,10 @@ const Navbar = () => {
         navigate(`/#${sectionId}`);
     };
 
+    const handleRedirectLogin = ()=>{
+        navigate("/Login");
+
+    }
 
     return (
         <nav className={styles["navbar"]}>
@@ -25,7 +29,7 @@ const Navbar = () => {
                     </>
                 ) : (
                     <>
-                        <a href="/Login" className={styles["history"]}>Autentificare</a>
+                        <p onClick={handleRedirectLogin} className={styles["history"]}>Autentificare</p>
                     </>
                 )}
                 <button onClick={() => goToHomeSection('history')} className={styles["history"]}>Despre noi</button>

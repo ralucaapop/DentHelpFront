@@ -169,12 +169,12 @@ const Login = () => {
                         </form>
 
                         <p className={styles["forgot-password-link"]} onClick={() => setShowModal(true)} >
-                            Ati uitat parola?
+                            Ați uitat parola?
                         </p>
 
                         <h2 onClick={() => navigator("/Register")}
                             className={styles["register-link"]}>
-                            Nu aveti un cont? <br />Creati unul
+                            Nu aveți un cont? <br />Creați unul
                         </h2>
                     </div>
                 </div>
