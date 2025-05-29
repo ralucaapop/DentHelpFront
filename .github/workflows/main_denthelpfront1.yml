@@ -21,12 +21,35 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: Install dependencies & build
-        run: |
-          npm install --legacy-peer-deps
-          npm run build
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
 
-      - name: Zip only `dist/` for deployment
+      - name: Build Vite app
+        run: npm run build
+
+      - name: Add Azure rewrite rules (web.config)
+        run: |
+          cat <<EOF > dist/web.config
+          <?xml version="1.0" encoding="utf-8"?>
+          <configuration>
+            <system.webServer>
+              <rewrite>
+                <rules>
+                  <rule name="Vite SPA fallback" stopProcessing="true">
+                    <match url=".*" />
+                    <conditions logicalGrouping="MatchAll">
+                      <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+                      <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+                    </conditions>
+                    <action type="Rewrite" url="/index.html" />
+                  </rule>
+                </rules>
+              </rewrite>
+            </system.webServer>
+          </configuration>
+          EOF
+
+      - name: Zip contents of dist/ folder
         run: |
           cd dist
           zip -r ../release.zip ./*
